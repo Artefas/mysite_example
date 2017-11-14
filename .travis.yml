@@ -1,13 +1,15 @@
 language: python
-
 python:
- - 3.6
-
+- 3.6
 env:
- - DJANGO=1.11
-
+- DJANGO=1.11
 install:
- - pip install -r requirements.txt
-
+- pip install -r requirements.txt
 script:
- - python manage.py test
+- python manage.py test
+deploy:
+  provider: heroku
+  api_key:
+    secure: b+4JGn3biwio4CtjCujKKq1S1xqX6CGG8+H0SVD8FJSp12S6O9BXUxwQMzOKH0aQpyG4vJHpt1lnbi8UqpEci6rhm0/NpeGB+E81OBcpPjytrQvkTbfzHDarhGerP32AJevzWvM/zdsz9+SsYiYKKVTO7KV6ZV09M2jAcXyW2i25MlxMbtE4+y5pvseKj9mJ5vmwlb25hGqn4Bq0EsNlX489+CFvBpp5dztW4/X1/Eqb+yNtXQQCSv4DdtU4KQT7J4bs1uclCWz8o6z5xnG4UuD6pwJODIdFOLwiWh6tXNa9ZGvlowdyH+J/qbXOsqu5pYFFBUvoD4O+blTu4mUe/CGEzw8TvFRINPfgupoGymbw1QVGWlcIujlmA0pB0IdFOtNx8F6yBF1vOxPKgPASFUVNTthebNbcTdHLtMvUB+WOy/9Kmb/Sg1dZdczpgUHwPsAqcbXB48TIQeXFJRZHy9Q6ltB3MaoFyzdoEu50gqZjoNIsZd2bf64lQBY7MkU13f6bnY4AzNQTyDJAgJT/B4nXTOzUtUL54JCi03iSW2xSCbjVngnK7sNwTD6idlM/s+DnLsP8jLubA3KoMv7KMxdPjtfTsIsY8rvlQm+OUvkRlgdsyVBOETtxGKhQ38qx2rrfM1Ki9CKghVqAxabfInuw+pDvJ1/LJvQ//obnyyY=
+  app:
+    master: rcoi-krivtsov
